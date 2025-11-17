@@ -4,7 +4,7 @@ import sqlalchemy
 from sqlalchemy.engine import Engine
 from sshtunnel import SSHTunnelForwarder
 
-from config import CONFIG, get_logger
+from helper_scripts.config import CONFIG, get_logger
 
 logger = get_logger(__name__)
 
