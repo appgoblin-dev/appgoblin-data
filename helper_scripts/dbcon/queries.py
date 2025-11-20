@@ -7,8 +7,8 @@ import numpy as np
 import pandas as pd
 from sqlalchemy import text
 
-from config import MODULE_DIR, get_logger
-from dbcon.connections import get_db_connection
+from helper_scripts.config import MODULE_DIR, get_logger
+from helper_scripts.dbcon.connections import get_db_connection
 
 logger = get_logger(__name__)
 
