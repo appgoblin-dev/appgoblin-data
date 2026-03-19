@@ -6,13 +6,14 @@ Free Data Dumps from [AppGoblin](https://appgoblin.info). AppGoblin is a resourc
 
 Due to 100mb limits, files are compressed and do not contain 'all' the data. If you don't see data you're looking for, feel free to ask.
 
-This repo includes these files in `/data`:
-
+### Files in `/data`:
 - `live_store_apps.tsv.xz`: Apps that are currently live on the Google Play and Apple App Store. This TSV includes names and categories.
 - `store_apps.tsv.xz`: All Appgoblin's known 4m+ Android and iOS app store ids. Many of which are no longer live on the app stores.
-- `store_apps_metrics.tsv.xz` (limited): Live apps with metrics such as installs, rating, and review count from AppGoblin.
+- `store_apps_metrics.tsv.xz` (limited): ~2m 'Live' apps only with installs and toatal ratings. For full file see larger hosted one.
 
-A fuller `store_apps` list, fuller metrics export, and descriptions dataset are available for free at https://appgoblin.info/free-app-datasets.
+### Larger files hosted:
+- `store_apps_metrics.tsv.xz`, This is all 5m+ apps with with installs, ratings, app rating, release date, store last updated and several other app meta data.
+- `descriptions.tsv.xz`: Eglish languagedatasets are hosted for free at [https://appgoblin.info/free-app-datasets](https://appgoblin.info/free-app-datasets) due to being larger that GitHub file size limits.
 
 Apps-per-company data is available on AppGoblin in the B2B datasets.
 
@@ -79,67 +80,3 @@ The data comes from three tag_sources:
 | com.example.app | game_action  | yahoo.com      | Yahoo!       | Yahoo!              | app_ads_reseller |
 | com.example.app | game_action  | verve.com      | Verve Group  | Verve Group         | app_ads_reseller |
 
-## Monthly public exports
-
-The export pipeline supports monthly, versioned CSV archives for:
-
-- `descriptions`
-- `store-apps-metrics`
-
-### File naming
-
-Each monthly file is generated as:
-
-- `YYYY_MM_01_<dataset>.tsv.xz`
-
-Examples:
-
-- `2026_03_01_descriptions.tsv.xz`
-- `2026_03_01_store-apps-metrics.tsv.xz`
-
-### Object key structure
-
-Files are uploaded to:
-
-- `downloads/<dataset>/year=YYYY/month=MM/YYYY_MM_01_<dataset>.tsv.xz`
-
-### Run exports manually
-
-Run both datasets for the current month:
-
-```bash
-python -m agdata.upload_to_object_storage monthly
-```
-
-Run both datasets for a specific month:
-
-```bash
-python -m agdata.upload_to_object_storage monthly --year 2026 --month 3
-```
-
-Run one dataset only:
-
-```bash
-python -m agdata.upload_to_object_storage monthly --year 2026 --month 3 --datasets descriptions
-python -m agdata.upload_to_object_storage monthly --year 2026 --month 3 --datasets store-apps-metrics
-```
-
-Overwrite existing objects (if needed):
-
-```bash
-python -m agdata.upload_to_object_storage monthly --year 2026 --month 3 --force
-```
-
-### Cron (monthly)
-
-Example crontab entry to run at 03:20 UTC on the first day of each month:
-
-```cron
-20 3 1 * * cd /home/james/appgoblin-data && /usr/bin/python3 -m agdata.upload_to_object_storage monthly >> /home/james/.config/appgoblin/logs/monthly_exports.log 2>&1
-```
-
-Notes:
-
-- Exports use chunked database reads and chunked CSV writes to avoid high memory usage.
-- Uploads are idempotent by default (existing monthly object keys are skipped).
-- Public bucket ACL changes are not required (bucket-level public access is assumed).
