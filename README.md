@@ -12,8 +12,9 @@ Due to 100mb limits, files are compressed and do not contain 'all' the data. If 
 - `store_apps_metrics.tsv.xz` (limited): ~2m 'Live' apps only with installs and toatal ratings. For full file see larger hosted one.
 
 ### Larger files hosted:
+Free on [https://appgoblin.info/free-app-datasets](https://appgoblin.info/free-app-datasets) due to being larger that GitHub size limits.
 - `store_apps_metrics.tsv.xz`, This is all 5m+ apps with with installs, ratings, app rating, release date, store last updated and several other app meta data.
-- `descriptions.tsv.xz`: Eglish languagedatasets are hosted for free at [https://appgoblin.info/free-app-datasets](https://appgoblin.info/free-app-datasets) due to being larger that GitHub file size limits.
+- `descriptions.tsv.xz`: Eglish language store app descriptions, based on the latest crawls. English language here are apps that were queried for `en` and checked once for mostly english output, but may still contain non english languages. 
 
 Apps-per-company data is available on AppGoblin in the B2B datasets.
 
