@@ -1,6 +1,11 @@
 # Free Mobile App Store Data Dumps from AppGoblin
 
-Free Data Dumps from [AppGoblin](https://appgoblin.info). AppGoblin is a resource for free android and ios app intelligence. AppGoblin has the biggest free dashboard to browse mobile apps and the SDKs they use for advertising, product analytics and other open source libraries. AppGoblin also has live advertising information for which apps are currently advertising.
+Due to the github file limits more recent files are being hosted and available for free download on AppGoblin:
+https://appgoblin.info/free-app-datasets
+
+
+## About AppGoblin
+Free Data Dumps from [AppGoblin](https://appgoblin.info). AppGoblin is a resource for free Android and iOS app intelligence. AppGoblin has the best dashboard to browse mobile apps and their SDKs.  AppGoblin scans apps for SDKs including advertising, product analytics and other open source libraries. AppGoblin also has live advertising information for which apps are currently advertising.
 
 ## Data files
 
