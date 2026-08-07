@@ -86,3 +86,18 @@ The data comes from three tag_sources:
 | com.example.app | game_action  | yahoo.com      | Yahoo!       | Yahoo!              | app_ads_reseller |
 | com.example.app | game_action  | verve.com      | Verve Group  | Verve Group         | app_ads_reseller |
 
+
+
+
+
+
+## License & Attribution
+
+This dataset is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Previous versions were MIT.
+
+### Attribution
+Under section 3(a)(1)(A) of CC BY 4.0, any public use, redistribution, adaptation, or derivative product built using this data must include a visible attribution link back to AppGoblin. This does not apply to datasets from before August 2026, but would still be appreciated.
+
+**Preferred Citation Format:**
+> Data provided by [AppGoblin](https://appgoblin.info) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
