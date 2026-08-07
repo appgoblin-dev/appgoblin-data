@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "AppGoblin Free Mobile App Analytics Datasets"
+message: "If you use this dataset, please cite it using the metadata below and link back to appgoblin.info."
+type: dataset
+authors:
+  - name: "AppGoblin"
+    website: "https://appgoblin.info"
+repository-code: "https://github.com/appgoblin-dev/appgoblin-data"
+url: "https://appgoblin.info"
+license: CC-BY-4.0
